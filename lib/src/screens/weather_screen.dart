@@ -20,19 +20,44 @@ class _WeatherScreenState extends State<WeatherScreen> {
           elevation: 0,
           title: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text(
-                DateFormat('E, MMMM d yy HH:mm').format(DateTime.now()),
-                style:
-                    TextStyle(color: Colors.white.withAlpha(80), fontSize: 14),
-              )
-            ],
+            children: <Widget>[],
           ),
         ),
         body: Material(
           child: Container(
             constraints: BoxConstraints.expand(),
             decoration: BoxDecoration(color: Colors.black),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text(
+                  "São José dos Campos",
+                  style: TextStyle(color: Colors.white, fontSize: 14),
+                ),
+                Text(
+                  DateFormat('E, MMMM d yy HH:mm').format(DateTime.now()),
+                  style: TextStyle(
+                      color: Colors.white.withAlpha(80), fontSize: 14),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Icon(
+                      Icons.wb_sunny,
+                      color: Colors.white,
+                      size: 70,
+                    ),
+                    Text(
+                      "30º",
+                      style: TextStyle(color: Colors.white, fontSize: 80),
+                    ),
+                  ],
+                )
+              ],
+            ),
           ),
         ));
   }
