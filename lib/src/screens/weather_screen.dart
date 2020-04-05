@@ -52,7 +52,10 @@ class _WeatherScreenState extends State<WeatherScreen> {
                     ),
                     Text(
                       "30º",
-                      style: TextStyle(color: Colors.white, fontSize: 80),
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w100,
+                          fontSize: 80),
                     ),
                   ],
                 )
