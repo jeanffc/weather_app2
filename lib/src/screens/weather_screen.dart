@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:geolocator/geolocator.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class WeatherScreen extends StatefulWidget {
   @override
@@ -63,5 +65,24 @@ class _WeatherScreenState extends State<WeatherScreen> {
             ),
           ),
         ));
+  }
+
+  _fetchWeatherWithLocation() async {
+    var permissionHandler = PermissionHandler();
+    var permissionResult = await permissionHandler
+        .requestPermissions([PermissionGroup.locationWhenInUse]);
+
+    switch (permissionResult[PermissionGroup.locationWhenInUse]) {
+      case PermissionStatus.denied:
+      case PermissionStatus.unknown:
+        print('location permission denied');
+        _showLocationDeniedDialog(permissionHandler);
+        throw Error();
+    }
+
+    Position position = await Geolocator()
+        .getCurrentPosition(desiredAccuracy: LocationAccuracy.low);
+    _weatherBloc.dispatch(FetchWeather(
+        longitude: position.longitude, latitude: position.latitude));
   }
 }
