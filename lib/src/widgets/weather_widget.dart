@@ -90,6 +90,18 @@ class WeatherWidget extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
+          Row(mainAxisAlignment: MainAxisAlignment.start, children: <Widget>[
+            SizedBox(
+              width: 20,
+            ),
+            Text(
+              'Hourly',
+              style: TextStyle(
+                  fontWeight: FontWeight.w100,
+                  color: Colors.white.withAlpha(85),
+                  fontSize: 14),
+            ),
+          ]),
           Padding(
             child: Divider(
               color:
