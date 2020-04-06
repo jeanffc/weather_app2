@@ -4,7 +4,7 @@ This project is a weather application made with Flutter.
 
 | Current Location                                                                                                             | Change Location                                                                                                              | Final Location                                                                                                               |
 | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| <img src="https://user-images.githubusercontent.com/767813/78570671-a8295880-77fb-11ea-982d-bcacf6bdb31b.png" width="200" /> | <img src="https://user-images.githubusercontent.com/767813/78571160-43bac900-77fc-11ea-8495-ab2f9d403a0a.png" width="200" /> | <img src="https://user-images.githubusercontent.com/767813/78571162-44ebf600-77fc-11ea-969a-5ef6d43f025b.png" width="200" /> |
+| <img src="https://user-images.githubusercontent.com/767813/78588553-3cec8000-7815-11ea-86c0-7ed5549478f9.png" width="200" /> | <img src="https://user-images.githubusercontent.com/767813/78588564-3f4eda00-7815-11ea-9472-883ed94b1e17.png" width="200" /> | <img src="https://user-images.githubusercontent.com/767813/78571162-44ebf600-77fc-11ea-969a-5ef6d43f025b.png" width="200" /> |
 
 ## Getting Started
 
