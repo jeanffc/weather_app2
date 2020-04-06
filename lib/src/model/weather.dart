@@ -20,6 +20,8 @@ class Weather {
   Temperature maxTemperature;
   Temperature minTemperature;
 
+  Temperature feelsLike;
+
   List<Weather> forecast;
 
   Weather(
@@ -36,6 +38,7 @@ class Weather {
       this.temperature,
       this.maxTemperature,
       this.minTemperature,
+      this.feelsLike,
       this.forecast});
 
   static Weather fromJson(Map<String, dynamic> json) {
@@ -50,6 +53,7 @@ class Weather {
       temperature: Temperature(intToDouble(json['main']['temp'])),
       maxTemperature: Temperature(intToDouble(json['main']['temp_max'])),
       minTemperature: Temperature(intToDouble(json['main']['temp_min'])),
+      feelsLike: Temperature(intToDouble(json['main']['feels_like'])),
       sunrise: json['sys']['sunrise'],
       sunset: json['sys']['sunset'],
       humidity: json['main']['humidity'],
@@ -62,6 +66,7 @@ class Weather {
     for (final item in json['list']) {
       weathers.add(Weather(
           time: item['dt'],
+          humidity: item['main']['humidity'],
           temperature: Temperature(intToDouble(
             item['main']['temp'],
           )),
