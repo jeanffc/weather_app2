@@ -18,7 +18,7 @@ class ForecastHorizontal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 70,
+      height: 120,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         shrinkWrap: true,

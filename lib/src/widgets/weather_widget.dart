@@ -28,7 +28,6 @@ class WeatherWidget extends StatelessWidget {
             Text(
               this.weather.cityName,
               style: TextStyle(
-                  fontWeight: FontWeight.w100,
                   color: AppStateContainer.of(context).theme.accentColor,
                   fontSize: 20),
             ),
@@ -38,10 +37,7 @@ class WeatherWidget extends StatelessWidget {
           ),
           Text(
             DateFormat('E, MMMM d yy HH:mm').format(DateTime.now()),
-            style: TextStyle(
-                fontWeight: FontWeight.w100,
-                color: Colors.white.withAlpha(85),
-                fontSize: 14),
+            style: TextStyle(color: Colors.white.withAlpha(85), fontSize: 14),
           ),
           SizedBox(
             height: 20,
@@ -62,7 +58,7 @@ class WeatherWidget extends StatelessWidget {
                 '${this.weather.temperature.as(AppStateContainer.of(context).temperatureUnit).round()}°',
                 style: TextStyle(
                     fontSize: 100,
-                    fontWeight: FontWeight.w100,
+                    fontWeight: FontWeight.w200,
                     color: AppStateContainer.of(context).theme.accentColor),
               ),
             ],
@@ -73,7 +69,6 @@ class WeatherWidget extends StatelessWidget {
           Text(
             '${this.weather.maxTemperature.as(AppStateContainer.of(context).temperatureUnit).round()}° / ${this.weather.minTemperature.as(AppStateContainer.of(context).temperatureUnit).round()}° Feels like ${this.weather.feelsLike.as(AppStateContainer.of(context).temperatureUnit).round()}°',
             style: TextStyle(
-                fontWeight: FontWeight.w100,
                 fontSize: 16,
                 color: AppStateContainer.of(context).theme.accentColor),
           ),
@@ -83,7 +78,6 @@ class WeatherWidget extends StatelessWidget {
           Text(
             this.weather.description,
             style: TextStyle(
-                fontWeight: FontWeight.w100,
                 fontSize: 16,
                 color: AppStateContainer.of(context).theme.accentColor),
           ),
@@ -96,10 +90,7 @@ class WeatherWidget extends StatelessWidget {
             ),
             Text(
               'Hourly',
-              style: TextStyle(
-                  fontWeight: FontWeight.w100,
-                  color: Colors.white.withAlpha(85),
-                  fontSize: 14),
+              style: TextStyle(color: Colors.white, fontSize: 14),
             ),
           ]),
           Padding(
